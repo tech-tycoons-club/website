@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,400;0,700;1,300;1,400&family=Poppins:wght@300;400;500&family=Quicksand:wght@300;400;500;600&family=Zen+Dots&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f9fafd;
+    width: 100vw;
+
+}
+
+.header--box {
+    /* border: 2px solid red; */
+    position: relative;
+    color: #fff;
+    background-color: rgb(16, 19, 42);
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0 0 0 50px;
+}
+
+#bg-js {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+
+nav {
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    backdrop-filter: blur(15px);
+}
+
+.desktop--items {
+    display: none;
+}
+
+nav .mobile--menu {
+    gap: 4px;
+    margin-top: 3px;
+    margin-right: 7px;
+}
+
+nav .mobile--menu .burger {
+    width: 40px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: #fff;
+    scale: 0.75;
+    transition: all 0.5s;
+}
+
+/* .mobile--menu:active>.burger:nth-child(1) {
+    background-color: red;
+    ;
+} */
+
+.top {
+    transition: transform 0.5s;
+    transform: translateY(11px) rotate(45deg);
+}
+
+.mid {
+    opacity: 0;
+}
+
+.bottom {
+    transition: transform 0.5s;
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+.mobmenu--items,
+.mobmenu--items--hidden {
+    position: absolute;
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    /* height: 100%; */
+    border-radius: 5px;
+    position: absolute;
+    top: 101px;
+    width: 81%;
+    left: 10vw;
+    visibility: visible;
+    transition: top 0.2s, visibility 0.3s;
+}
+
+.mobmenu--items--hidden {
+    visibility: hidden;
+    top: -350px;
+}
+
+.mobmenu--items ul,
+.desktop--items ul {
+    list-style: none;
+    color: #000;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.mobmenu--items ul li,
+.desktop--items ul li {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mobmenu--items ul li:hover,
+.desktop--items ul li:hover {
+    background-color: rgb(46, 46, 66);
+    color: #fff;
+    transition: all 0.5s;
+}
+
+header {
+    font-size: 36px;
+    height: 80vh;
+    text-align: center;
+
+}
+
+header .name {
+    font-family: 'Zen Dots', cursive;
+}
+
+header .tagline,
+header .summary {
+    font-size: 20px;
+}
+
+.main--box {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+main .missionBox,
+main .visionBox {
+    /* border: 2px solid red; */
+    height: 100%;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.missionBox h2,
+.visionBox h2 {
+    font-size: 40px;
+    margin-left: -12px;
+    /* display: inline; */
+}
+
+hr {
+
+    background-color: orange;
+    border: 3px solid orange;
+    margin-left: -10px;
+}
+
+.m-imgBox {
+    margin: 40px 0;
+    height: 30vh;
+    background: url('../Images/mission.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding-right: 20px;
+    transform: scale(1.1);
+}
+
+.v-imgBox {
+    margin: 40px 0;
+    height: 30vh;
+    background: url('../Images/vision.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding-right: 20px;
+    transform: scale(1.1);
+}
+
+.missionBox ul,
+.visionBox ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.missionBox ul li::before,
+.visionBox ul li::before {
+    content: "→";
+    font-size: 27px;
+    font-weight: 700;
+    margin-right: 20px;
+    ;
+}
+
+@media only screen and (min-width: 940px) {
+
+    .mobile--menu,
+    .mobmenu--items--hidden {
+        display: none !important;
+    }
+
+    .desktop--items {
+        display: block;
+        width: 100%;
+        padding: 7px;
+    }
+
+    nav {
+        gap: 50px;
+        align-items: center;
+    }
+
+    .desktop--items ul {
+        color: rgb(208, 196, 196);
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 40px;
+        /* margin-right: 20px; */
+        font-size: 18px;
+    }
+
+    .desktop--items ul li:hover {}
+}
