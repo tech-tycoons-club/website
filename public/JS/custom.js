@@ -75,16 +75,29 @@ mobMenu.addEventListener("click", () => {
 
 //intersection observer for navbar font color
 let navbar = document.getElementById("navbar")
-let deskul = document.getElementById("desk--ul")
+let deskul = document.getElementsByClassName("desk--ul")
+let burg = document.getElementsByClassName("burger")
+console.log(deskul)
 window.addEventListener("scroll", () => {
     let top = window.scrollX || document.documentElement.scrollTop;
     let left = window.scrollY || document.documentElement.scrollLeft;
 
     if (top >= 810 && left >= 810) {
         // console.log(top, left)
-        deskul.style.color = "#000"
+        for (let i = 0; i < deskul.length; i++) {
+            deskul[i].style.color = "#000"
+        }
+        for (let i = 0; i < burg.length; i++) {
+            burg[i].style.backgroundColor = "#000"
+        }
+
     }
     else {
-        deskul.style.color = "#fff"
+        for (let i = 0; i < deskul.length; i++) {
+            deskul[i].style.color = "#fff"
+        }
+        for (let i = 0; i < burg.length; i++) {
+            burg[i].style.backgroundColor = "#fff"
+        }
     }
 })

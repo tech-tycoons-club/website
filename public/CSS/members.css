@@ -15,23 +15,15 @@ body {
 }
 
 .header--box {
-    /* border: 2px solid red; */
+
     position: relative;
     color: #fff;
-    background-color: rgb(16, 19, 42);
+
     z-index: 1000;
     width: 100vw;
-    height: 100vh;
-    border-radius: 0 0 0 50px;
-}
+    /* height: 100vh; */
 
-#bg-js {
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
 }
-
 
 nav {
     height: 10vh;
@@ -40,7 +32,7 @@ nav {
     width: 100%;
     padding: 20px;
     backdrop-filter: blur(15px);
-    color: #fff;
+    /* color: #fff; */
 }
 
 .desktop--items {
@@ -58,15 +50,11 @@ nav .mobile--menu .burger {
     width: 40px;
     height: 4px;
     border-radius: 20px;
-    background-color: #fff;
+    background-color: rgb(0, 0, 0);
     scale: 0.75;
     transition: all 0.5s;
 }
 
-/* .mobile--menu:active>.burger:nth-child(1) {
-    background-color: red;
-    ;
-} */
 
 .top {
     transition: transform 0.5s;
@@ -134,7 +122,7 @@ nav .mobile--menu .burger {
 }
 
 .desktop--items ul li a {
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .mobmenu--items ul li a:hover,
@@ -145,42 +133,24 @@ nav .mobile--menu .burger {
 
 }
 
-header {
-    font-size: 36px;
-    height: 80vh;
-    text-align: center;
+/* the members page code starts here */
 
-}
-
-header .name {
-    font-family: 'Zen Dots', cursive;
-}
-
-header .tagline,
-header .summary {
-    font-size: 20px;
-}
-
-.main--box {
+.membersMain {
     padding: 20px;
     margin-top: 20px;
 }
 
-main .missionBox,
-main .visionBox,
-main .eventsOffered {
+
+main .membersLayout {
     /* border: 2px solid red; */
     height: 100%;
     padding: 20px;
     margin-top: 80px;
 }
 
-.missionBox h2,
-.visionBox h2,
-.eventsOffered h2 {
-    font-size: 40px;
+.membersLayout h2 {
+    font-size: 30px;
     margin-left: -12px;
-    /* display: inline; */
 }
 
 hr {
@@ -190,64 +160,16 @@ hr {
     margin-left: -10px;
 }
 
-.m-imgBox {
-    margin: 40px 0;
-    height: 30vh;
-    background: url('../Images/mission.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    padding-right: 20px;
-    transform: scale(1.1);
-    width: 90%;
-}
+/* write the responsive code for members code especially for mobiles here */
+/* set the device as iPhone 12 pro for working and test for other devices */
+/* All the best! */
 
-.v-imgBox {
-    margin: 40px 0;
-    height: 30vh;
-    background: url('../Images/vision.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    padding-right: 20px;
-    transform: scale(1.1);
-    width: 90%;
-}
 
-.missionBox ul,
-.visionBox ul {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    font-size: 17px;
-    font-weight: 500;
-}
 
-.missionBox ul li::before,
-.visionBox ul li::before {
-    content: "→";
-    font-size: 27px;
-    font-weight: 700;
-    margin-right: 20px;
-    ;
-}
+@media only screen and (min-width:768px) {
 
-/* .eventsOffered {
-    border: 2px solid red;
+    /* write the responsive code for members code especially for tablets here */
 }
-
-.eventBox {
-    margin-top: 20px;
-    border: 2px solid red;
-    ;
-}
-
-.note p {
-    margin: 30px 0;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25px;
-} */
 
 @media only screen and (min-width: 940px) {
 
@@ -278,4 +200,11 @@ hr {
     }
 
     .desktop--items ul li:hover {}
+
+    .membersMain h2 {
+        font-size: 40px;
+    }
+
+    /* write the responsive code for members code especially for pc here */
+
 }
