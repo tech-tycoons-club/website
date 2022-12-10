@@ -93,7 +93,78 @@
                     <hr>
                 </div>
                 <div class="eventsBox">
-
+                    <div class="tabs">
+                        <div class="tab tab1">Finished</div>
+                        <div class="tab tab2 active">Present</div>
+                        <div class="tab tab3">Upcoming</div>
+                    </div>
+                    <div class="tabView">
+                        <div class="pastEvents">
+                            <div class="eventCard">
+                                <img class="eventCardImage" src="https://picsum.photos/500/300">
+                                <div class="eventDetailsContainer">
+                                    <div class="eventTitle">
+                                        <h3 class="eventTitleText">Hi this is title</h3>
+                                    </div>
+                                    <div class="eventDescription">
+                                        <p class="eventDescriptionText">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Reprehenderit tenetur tempore harum rem, animi expedita
+                                            non sit magnam neque aspernatur amet iusto at nulla deserunt id esse impedit
+                                            doloremque. Obcaecati eaque veniam libero debitis dignissimos provident, quo
+                                            sed est assumenda.</p>
+                                    </div>
+                                    <div class="eventDateAndTime">
+                                        <p class="eventTimeText">When? <strong> 12th
+                                                November, 2023 at 3:50pm</strong> </p>
+                                    </div>
+                                    <div class="eventRegistrationForm">
+                                        <button class="eventRegistrationButton"><a class="eventRegistrationAnchor"
+                                                href="https://www.google.com" target="_blank">Register Now!</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eventCard">
+                                <img class="eventCardImage" src="https://picsum.photos/500/300">
+                                <div class="eventDetailsContainer">
+                                    <div class="eventTitle">
+                                        <h3 class="eventTitleText">Hi this is title</h3>
+                                    </div>
+                                    <div class="eventDescription font-16">
+                                        <p class="eventDescriptionText">This is a really really long long long long long
+                                            long description of event</p>
+                                    </div>
+                                    <div class="eventDateAndTime font-16">
+                                        <p class="eventTimeText">When? <strong> 12th
+                                                November, 2023 at 3:50pm</strong> </p>
+                                    </div>
+                                    <div class="eventRegistrationForm">
+                                        <button class="eventRegistrationButton"><a class="eventRegistrationAnchor"
+                                                href="https://www.google.com" target="_blank">Register Now!</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eventCard">
+                                <img class="eventCardImage" src="https://picsum.photos/500/300">
+                                <div class="eventDetailsContainer">
+                                    <div class="eventTitle">
+                                        <h3 class="eventTitleText">Hi this is title</h3>
+                                    </div>
+                                    <div class="eventDescription font-16">
+                                        <p class="eventDescriptionText">This is a really really long long long long long
+                                            long description of event</p>
+                                    </div>
+                                    <div class="eventDateAndTime font-16">
+                                        <p class="eventTimeText">When? <strong> 12th
+                                                November, 2023 at 3:50pm</strong> </p>
+                                    </div>
+                                    <div class="eventRegistrationForm">
+                                        <button class="eventRegistrationButton"><a class="eventRegistrationAnchor"
+                                                href="https://www.google.com" target="_blank">Register Now!</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
@@ -145,6 +216,44 @@
                 }
             })
 
+            // event tabs
+            document.addEventListener("DOMContentLoaded", e => {
+                let tabParent = document.getElementsByClassName("tabs")[0]
+                let tabChild = tabParent.getElementsByTagName("div")
+                let tabView = document.getElementsByClassName("tabView")[0]
+                // tabView.innerHTML = `<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit.</h2>`
+
+                for (let i = 0; i < tabChild.length; i++) {
+                    // tabView
+                    tabChild[i].addEventListener("click", () => {
+                        tabParent.getElementsByClassName("active")[0].classList.remove("active");
+                        tabChild[i].classList.add("active");
+
+                        //         if (tabChild[i].textContent == "Finished") {
+                        //             tabView.innerHTML =
+                        //                 `
+                        //             <div class="cardsLayout">
+                        //     <div class="card">
+                        //         <h2>Card name1</h2>
+                        //         <p>lorem20</p>
+                        //     </div>
+                        //     <div class="card">
+                        //         <h2>Card name2</h2>
+                        //         <p>lorem20</p>
+                        //     </div>
+                        // </div>
+                        //             `
+                        //         }
+                        //         else if (tabChild[i].textContent == "Present") {
+                        //             tabView.innerHTML = `<h2>${tabChild[i].textContent}</h2>`
+                        //         }
+                        //         else {
+                        //             tabView.innerHTML = `<h2>${tabChild[i].textContent}</h2>`
+                        //         }
+
+                    })
+                }
+            })
         </script>
     </body>
 

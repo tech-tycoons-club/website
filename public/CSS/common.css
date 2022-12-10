@@ -162,6 +162,7 @@ hr {
     border: 3px solid orange;
     margin-left: -10px;
     margin-top: 10px;
+
 }
 
 /* write the responsive code for members code especially for mobiles here */
@@ -207,7 +208,7 @@ hr {
 
     .membersMain h2,
     .eventsMain h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     /* write the responsive code for members code especially for pc here */
