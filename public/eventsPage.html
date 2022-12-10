@@ -1,97 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tech Tycoons</title>
-    </head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Welcome to Firebase Hosting</title>
 
-    <body>
-        <!DOCTYPE html>
-        <html>
-
-            <head>
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                <title>Welcome to Firebase Hosting</title>
-
-                <!-- update the version number as needed -->
-                <script defer src="/__/firebase/9.14.0/firebase-app-compat.js"></script>
-                <!-- include only the Firebase features as you need -->
-                <script defer src="/__/firebase/9.14.0/firebase-auth-compat.js"></script>
-                <script defer src="/__/firebase/9.14.0/firebase-database-compat.js"></script>
-                <script defer src="/__/firebase/9.14.0/firebase-firestore-compat.js"></script>
-                <script defer src="/__/firebase/9.14.0/firebase-functions-compat.js"></script>
-                <script defer src="/__/firebase/9.14.0/firebase-messaging-compat.js"></script>
-                <script defer src="/__/firebase/9.14.0/firebase-storage-compat.js"></script>
-                <script defer src="/__/firebase/9.14.0/firebase-analytics-compat.js"></script>
-                <script defer src="/__/firebase/9.14.0/firebase-remote-config-compat.js"></script>
-                <script defer src="/__/firebase/9.14.0/firebase-performance-compat.js"></script>
-                <!-- 
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/9.14.0/firebase-app-compat.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/9.14.0/firebase-auth-compat.js"></script>
+        <script defer src="/__/firebase/9.14.0/firebase-database-compat.js"></script>
+        <script defer src="/__/firebase/9.14.0/firebase-firestore-compat.js"></script>
+        <script defer src="/__/firebase/9.14.0/firebase-functions-compat.js"></script>
+        <script defer src="/__/firebase/9.14.0/firebase-messaging-compat.js"></script>
+        <script defer src="/__/firebase/9.14.0/firebase-storage-compat.js"></script>
+        <script defer src="/__/firebase/9.14.0/firebase-analytics-compat.js"></script>
+        <script defer src="/__/firebase/9.14.0/firebase-remote-config-compat.js"></script>
+        <script defer src="/__/firebase/9.14.0/firebase-performance-compat.js"></script>
+        <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-                <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+        <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
 
-                <!-- CSS and Fonts -->
-                <link rel="stylesheet" href="./CSS/index.css">
-                <link rel="stylesheet" href="./CSS/utility.css">
+        <!-- CSS and Fonts -->
+        <!-- <link rel="stylesheet" href="./CSS/index.css"> -->
+        <link rel="stylesheet" href="./CSS/utility.css">
+        <link rel="stylesheet" href="./CSS/common.css">
+        <link rel="stylesheet" href="./CSS/events.css">
 
-            </head>
 
-            <body>
-                <div class="header--box">
-                    <!-- nav section -->
-                    <div id="bg-js"></div>
-                    <div class="after-bg">
-                        <nav class="flex just-between" id="navbar">
-                            <div class="logobox">
-                                <h2>Placeholder</h2>
-                            </div>
-                            <div class="desktop--items">
-                                <ul id="desk--ul">
-                                    <li class="mob--list"><a href="./eventsPage.html" target="_blank"
-                                            rel="noopener noreferrer">Events &
-                                            Registration</a></li>
-                                    <li class="mob--list"><a href="./galleryPage.html" target="_blank"
-                                            rel="noopener noreferrer">Gallery</a>
-                                    </li>
-                                    <li class="mob--list"><a href="./blogPage.html" target="_blank"
-                                            rel="noopener noreferrer">Blog</a></li>
-                                    <li class="mob--list"><a href="./membersPage.html" target="_blank"
-                                            rel="noopener noreferrer">Members</a>
-                                    </li>
-                                    <li class="mob--list"><a href="#" target="_blank"
-                                            rel="noopener noreferrer">Achievements</a></li>
-                                </ul>
-                            </div>
-                            <div class="mobile--menu flex flex-col" id="mob">
-                                <div class="burger"></div>
-                                <div class="burger"></div>
-                                <div class="burger"></div>
-                            </div>
-                            <div class="mobmenu--items--hidden" id="dropdown">
-                                <ul class="mob--ul">
-                                    <li class="mob--list"><a href="./eventsPage.html" target="_blank"
-                                            rel="noopener noreferrer">Events &
-                                            Registration</a></li>
-                                    <li class="mob--list"><a href="./galleryPage.html" target="_blank"
-                                            rel="noopener noreferrer">Gallery</a>
-                                    </li>
-                                    <li class="mob--list"><a href="./blogPage.html" target="_blank"
-                                            rel="noopener noreferrer">Blog</a></li>
-                                    <li class="mob--list"><a href="./membersPage.html" target="_blank"
-                                            rel="noopener noreferrer">Members</a>
-                                    </li>
-                                    <li class="mob--list"><a href="#" target="_blank"
-                                            rel="noopener noreferrer">Achievements</a></li>
-                                </ul>
-                            </div>
-                        </nav>
+    </head>
 
-            </body>
+    <body>
 
-        </html>
+        <div class="header--box">
+            <!-- nav section -->
+
+            <nav class="flex just-between" id="navbar">
+                <div class="logobox">
+                    <h2>Placeholder</h2>
+                </div>
+                <div class="desktop--items">
+                    <ul id="desk--ul">
+                        <li class="mob--list"><a href="./eventsPage.html" target="_blank"
+                                rel="noopener noreferrer">Events &
+                                Registration</a></li>
+                        <li class="mob--list"><a href="./galleryPage.html" target="_blank"
+                                rel="noopener noreferrer">Gallery</a>
+                        </li>
+                        <li class="mob--list"><a href="./blogPage.html" target="_blank"
+                                rel="noopener noreferrer">Blog</a></li>
+                        <li class="mob--list"><a href="./membersPage.html" target="_blank"
+                                rel="noopener noreferrer">Members</a>
+                        </li>
+                        <li class="mob--list"><a href="#" target="_blank" rel="noopener noreferrer">Achievements</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile--menu flex flex-col" id="mob">
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                </div>
+                <div class="mobmenu--items--hidden" id="dropdown">
+                    <ul class="mob--ul">
+                        <li class="mob--list"><a href="./eventsPage.html" target="_blank"
+                                rel="noopener noreferrer">Events &
+                                Registration</a></li>
+                        <li class="mob--list"><a href="./galleryPage.html" target="_blank"
+                                rel="noopener noreferrer">Gallery</a>
+                        </li>
+                        <li class="mob--list"><a href="./blogPage.html" target="_blank"
+                                rel="noopener noreferrer">Blog</a></li>
+                        <li class="mob--list"><a href="./membersPage.html" target="_blank"
+                                rel="noopener noreferrer">Members</a>
+                        </li>
+                        <li class="mob--list"><a href="#" target="_blank" rel="noopener noreferrer">Achievements</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <div class="eventsMain">
+            <main>
+                <div class="eventsLayout">
+                    <h2>Events and Registrations
+                    </h2>
+                    <hr>
+                </div>
+                <div class="eventsBox">
+
+                </div>
+            </main>
+        </div>
+        <script>
+            // for the navbar
+            let mobMenu = document.querySelector(".mobile--menu")
+            let mobItems = document.querySelector("#dropdown")
+            mobMenu.addEventListener("click", () => {
+                mobMenu.children[0].classList.toggle('top');
+                mobMenu.children[1].classList.toggle('mid');
+                mobMenu.children[2].classList.toggle('bottom');
+                console.log("yes")
+
+                if (mobItems.classList.contains("mobmenu--items--hidden")) {
+                    mobItems.classList.replace('mobmenu--items--hidden', 'mobmenu--items')
+                } else {
+
+                    mobItems.classList.replace('mobmenu--items', 'mobmenu--items--hidden')
+                }
+
+            })
+
+            //intersection observer for navbar font color
+            let navbar = document.getElementById("navbar")
+            let deskul = document.getElementsByClassName("desk--ul")
+            let burg = document.getElementsByClassName("burger")
+            console.log(deskul)
+            window.addEventListener("scroll", () => {
+                let top = window.scrollX || document.documentElement.scrollTop;
+                let left = window.scrollY || document.documentElement.scrollLeft;
+
+                if (top >= 810 && left >= 810) {
+                    // console.log(top, left)
+                    for (let i = 0; i < deskul.length; i++) {
+                        deskul[i].style.color = "#000"
+                    }
+                    for (let i = 0; i < burg.length; i++) {
+                        burg[i].style.backgroundColor = "#000"
+                    }
+
+                }
+                else {
+                    for (let i = 0; i < deskul.length; i++) {
+                        deskul[i].style.color = "#fff"
+                    }
+                    for (let i = 0; i < burg.length; i++) {
+                        burg[i].style.backgroundColor = "#fff"
+                    }
+                }
+            })
+
+        </script>
+    </body>
+
+</html>
