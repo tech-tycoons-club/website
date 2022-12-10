@@ -99,8 +99,8 @@
                         <div class="tab tab3">Upcoming</div>
                     </div>
                     <div class="tabView">
-                        <div class="pastEvents">
-                            <div class="eventCard">
+                        <div class="eventsContainer">
+                            <div id="placeholderEvent" class="eventCard" style="display:none">
                                 <img class="eventCardImage" src="https://picsum.photos/500/300">
                                 <div class="eventDetailsContainer">
                                     <div class="eventTitle">
@@ -114,47 +114,7 @@
                                             sed est assumenda.</p>
                                     </div>
                                     <div class="eventDateAndTime">
-                                        <p class="eventTimeText">When? <strong> 12th
-                                                November, 2023 at 3:50pm</strong> </p>
-                                    </div>
-                                    <div class="eventRegistrationForm">
-                                        <button class="eventRegistrationButton"><a class="eventRegistrationAnchor"
-                                                href="https://www.google.com" target="_blank">Register Now!</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="eventCard">
-                                <img class="eventCardImage" src="https://picsum.photos/500/300">
-                                <div class="eventDetailsContainer">
-                                    <div class="eventTitle">
-                                        <h3 class="eventTitleText">Hi this is title</h3>
-                                    </div>
-                                    <div class="eventDescription font-16">
-                                        <p class="eventDescriptionText">This is a really really long long long long long
-                                            long description of event</p>
-                                    </div>
-                                    <div class="eventDateAndTime font-16">
-                                        <p class="eventTimeText">When? <strong> 12th
-                                                November, 2023 at 3:50pm</strong> </p>
-                                    </div>
-                                    <div class="eventRegistrationForm">
-                                        <button class="eventRegistrationButton"><a class="eventRegistrationAnchor"
-                                                href="https://www.google.com" target="_blank">Register Now!</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="eventCard">
-                                <img class="eventCardImage" src="https://picsum.photos/500/300">
-                                <div class="eventDetailsContainer">
-                                    <div class="eventTitle">
-                                        <h3 class="eventTitleText">Hi this is title</h3>
-                                    </div>
-                                    <div class="eventDescription font-16">
-                                        <p class="eventDescriptionText">This is a really really long long long long long
-                                            long description of event</p>
-                                    </div>
-                                    <div class="eventDateAndTime font-16">
-                                        <p class="eventTimeText">When? <strong> 12th
+                                        <p class="eventTimeText">When? <strong class="eventTimeInfo"> 12th
                                                 November, 2023 at 3:50pm</strong> </p>
                                     </div>
                                     <div class="eventRegistrationForm">
@@ -217,43 +177,115 @@
             })
 
             // event tabs
-            document.addEventListener("DOMContentLoaded", e => {
-                let tabParent = document.getElementsByClassName("tabs")[0]
-                let tabChild = tabParent.getElementsByTagName("div")
-                let tabView = document.getElementsByClassName("tabView")[0]
-                // tabView.innerHTML = `<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit.</h2>`
+            // document.addEventListener("DOMContentLoaded", e => {
+            //     let tabParent = document.getElementsByClassName("tabs")[0]
+            //     let tabChild = tabParent.getElementsByTagName("div")
+            //     let tabView = document.getElementsByClassName("tabView")[0]
 
+            //     for (let i = 0; i < tabChild.length; i++) {
+            //         // tabView
+            //         tabChild[i].addEventListener("click", () => {
+            //             tabParent.getElementsByClassName("active")[0].classList.remove("active");
+            //             tabChild[i].classList.add("active");
+
+            //         })
+            //     }
+            // })
+        </script>
+        <script type="module" async>
+
+        async function fetchEventsFromFirebase(){
+            const snapshot = await firebase.firestore().collection('Events').get();
+            snapshot.docs.map(doc => {
+                let data = doc.data();
+
+                // Loading card template
+                let tabParent = document.getElementsByClassName("tabs")[0];
+                let tabChild = tabParent.getElementsByTagName("div");
+                let eventContainer = document.getElementsByClassName("eventsContainer")[0];
+
+                let eventHtml = document.getElementById("placeholderEvent").innerHTML;
+                let activeTab = -1;
                 for (let i = 0; i < tabChild.length; i++) {
-                    // tabView
-                    tabChild[i].addEventListener("click", () => {
-                        tabParent.getElementsByClassName("active")[0].classList.remove("active");
-                        tabChild[i].classList.add("active");
-
-                        //         if (tabChild[i].textContent == "Finished") {
-                        //             tabView.innerHTML =
-                        //                 `
-                        //             <div class="cardsLayout">
-                        //     <div class="card">
-                        //         <h2>Card name1</h2>
-                        //         <p>lorem20</p>
-                        //     </div>
-                        //     <div class="card">
-                        //         <h2>Card name2</h2>
-                        //         <p>lorem20</p>
-                        //     </div>
-                        // </div>
-                        //             `
-                        //         }
-                        //         else if (tabChild[i].textContent == "Present") {
-                        //             tabView.innerHTML = `<h2>${tabChild[i].textContent}</h2>`
-                        //         }
-                        //         else {
-                        //             tabView.innerHTML = `<h2>${tabChild[i].textContent}</h2>`
-                        //         }
-
-                    })
+                    if(tabChild[i].classList.contains("active")){
+                        activeTab = i;
+                    }
                 }
+                
+
+                // Select only events relavant to current tab
+                let currDate = new Date();
+                let eventDate = data.dateTime.toDate();
+                let monthsDiff;
+                monthsDiff = (eventDate.getFullYear() - currDate.getFullYear()) * 12;
+                monthsDiff -= currDate.getMonth();
+                monthsDiff += eventDate.getMonth();
+                if (monthsDiff === 0 && activeTab !== 1){
+                    return;
+                }
+                if (monthsDiff < 0 && activeTab !== 0){
+                    return;
+                }
+                if (monthsDiff > 0 && activeTab !== 2){
+                    return;
+                }
+
+                // Creating an element
+                let eventElement = document.createElement("div");
+                eventElement.classList.add("eventCard");
+                eventElement.innerHTML = eventHtml;
+                
+                // Adding data
+                let titleTextElement = eventElement.getElementsByClassName("eventTitleText")[0];
+                titleTextElement.innerText = data.title;
+
+                let descriptionTextElement = eventElement.getElementsByClassName("eventDescriptionText")[0]
+                descriptionTextElement.innerText = data.description;
+
+                let timeDateElement = eventElement.getElementsByClassName("eventTimeInfo")[0];
+                let dateOptions = { 
+                    dateStyle: "full",
+                    timeStyle: "medium"
+                };
+                timeDateElement.innerText = data.dateTime.toDate().toLocaleString("hi-IN", dateOptions);
+
+                let registrationElement = eventElement.getElementsByClassName("eventRegistrationAnchor")[0];
+                registrationElement.setAttribute("href", data.registrationLink)
+                
+                eventContainer.appendChild(eventElement);
+                
+            });
+        }
+
+        await fetchEventsFromFirebase();
+        let tabParent = document.getElementsByClassName("tabs")[0]
+        let tabChild = tabParent.getElementsByTagName("div")
+        let tabView = document.getElementsByClassName("tabView")[0]
+
+        for (let i = 0; i < tabChild.length; i++) {
+            // tabView
+            tabChild[i].addEventListener("click", async function(){
+                tabParent.getElementsByClassName("active")[0].classList.remove("active");
+                tabChild[i].classList.add("active");
+
+                // Remove non-active children
+                let eventContainer = document.getElementsByClassName("eventsContainer")[0];
+                let eventChildren = eventContainer.children;
+                let placeholderElement;
+                for(let child = 0;child < eventChildren.length;child++){
+                    let childElement = eventChildren[child];
+                    if(childElement.id === "placeholderEvent"){
+                        placeholderElement = childElement;
+                    }
+                }
+                while(eventChildren.length > 0){
+                    eventChildren[0].remove();
+                }
+                eventContainer.appendChild(placeholderElement);
+
+                await fetchEventsFromFirebase();
             })
+        }
         </script>
     </body>
 

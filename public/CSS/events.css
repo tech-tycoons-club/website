@@ -46,7 +46,7 @@
 
 
 /* orz code */
-.pastEvents {
+.eventsContainer {
     display: grid;
     row-gap: 20px;
     grid-template-columns: repeat(auto-fit, 1fr);
@@ -98,10 +98,6 @@
     font-size: 16px;
 }
 
-.eventTimeHighlight {
-    /* font-weight: bold; */
-}
-
 .eventRegistrationForm {
     /* margin: auto; */
     text-align: center;
@@ -126,7 +122,7 @@
         font-size: 1.3em;
     }
 
-    .pastEvents {
+    .eventsContainer {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
 
@@ -166,7 +162,7 @@
         font-size: 30px;
     }
 
-    .pastEvents {
+    .eventsContainer {
         grid-template-columns: repeat(3, 1fr);
         column-gap: 20px;
         min-width: fit-content;
