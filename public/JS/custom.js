@@ -73,7 +73,7 @@ mobMenu.addEventListener("click", () => {
 
 })
 
-//intersection observer for navbar font color
+//changing for navbar font color
 let navbar = document.getElementById("navbar")
 let deskul = document.getElementsByClassName("desk--ul")
 let burg = document.getElementsByClassName("burger")

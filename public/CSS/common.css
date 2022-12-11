@@ -136,14 +136,16 @@ nav .mobile--menu .burger {
 /* the members page code starts here */
 
 .membersMain,
-.eventsMain {
+.eventsMain,
+.blogMain {
     padding: 20px;
     margin-top: 20px;
 }
 
 
 main .membersLayout,
-main .eventsLayout {
+main .eventsLayout,
+main .blogPageLayout {
     /* border: 2px solid red; */
     height: 100%;
     padding: 20px;
@@ -151,7 +153,8 @@ main .eventsLayout {
 }
 
 .membersLayout h2,
-.eventsLayout h2 {
+.eventsLayout h2,
+.blogPageLayout h2 {
     font-size: 27px;
     margin-left: -12px;
 }
@@ -165,16 +168,7 @@ hr {
 
 }
 
-/* write the responsive code for members code especially for mobiles here */
-/* set the device as iPhone 12 pro for working and test for other devices */
-/* All the best! */
 
-
-
-@media only screen and (min-width:768px) {
-
-    /* write the responsive code for members code especially for tablets here */
-}
 
 @media only screen and (min-width: 940px) {
 
@@ -207,10 +201,10 @@ hr {
     .desktop--items ul li:hover {}
 
     .membersMain h2,
-    .eventsMain h2 {
+    .eventsMain h2,
+    .blogMain h2 {
         font-size: 30px;
     }
 
-    /* write the responsive code for members code especially for pc here */
 
 }

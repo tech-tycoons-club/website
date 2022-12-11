@@ -128,164 +128,101 @@
                 </div>
             </main>
         </div>
-        <script>
-            // for the navbar
-            let mobMenu = document.querySelector(".mobile--menu")
-            let mobItems = document.querySelector("#dropdown")
-            mobMenu.addEventListener("click", () => {
-                mobMenu.children[0].classList.toggle('top');
-                mobMenu.children[1].classList.toggle('mid');
-                mobMenu.children[2].classList.toggle('bottom');
-                console.log("yes")
-
-                if (mobItems.classList.contains("mobmenu--items--hidden")) {
-                    mobItems.classList.replace('mobmenu--items--hidden', 'mobmenu--items')
-                } else {
-
-                    mobItems.classList.replace('mobmenu--items', 'mobmenu--items--hidden')
-                }
-
-            })
-
-            //intersection observer for navbar font color
-            let navbar = document.getElementById("navbar")
-            let deskul = document.getElementsByClassName("desk--ul")
-            let burg = document.getElementsByClassName("burger")
-            console.log(deskul)
-            window.addEventListener("scroll", () => {
-                let top = window.scrollX || document.documentElement.scrollTop;
-                let left = window.scrollY || document.documentElement.scrollLeft;
-
-                if (top >= 810 && left >= 810) {
-                    // console.log(top, left)
-                    for (let i = 0; i < deskul.length; i++) {
-                        deskul[i].style.color = "#000"
-                    }
-                    for (let i = 0; i < burg.length; i++) {
-                        burg[i].style.backgroundColor = "#000"
-                    }
-
-                }
-                else {
-                    for (let i = 0; i < deskul.length; i++) {
-                        deskul[i].style.color = "#fff"
-                    }
-                    for (let i = 0; i < burg.length; i++) {
-                        burg[i].style.backgroundColor = "#fff"
-                    }
-                }
-            })
-
-            // event tabs
-            // document.addEventListener("DOMContentLoaded", e => {
-            //     let tabParent = document.getElementsByClassName("tabs")[0]
-            //     let tabChild = tabParent.getElementsByTagName("div")
-            //     let tabView = document.getElementsByClassName("tabView")[0]
-
-            //     for (let i = 0; i < tabChild.length; i++) {
-            //         // tabView
-            //         tabChild[i].addEventListener("click", () => {
-            //             tabParent.getElementsByClassName("active")[0].classList.remove("active");
-            //             tabChild[i].classList.add("active");
-
-            //         })
-            //     }
-            // })
-        </script>
+        <script src="./JS/navbar.js"></script>
         <script type="module" async>
 
-        async function fetchEventsFromFirebase(){
-            const snapshot = await firebase.firestore().collection('Events').get();
-            snapshot.docs.map(doc => {
-                let data = doc.data();
+            async function fetchEventsFromFirebase() {
+                const snapshot = await firebase.firestore().collection('Events').get();
+                snapshot.docs.map(doc => {
+                    let data = doc.data();
 
-                // Loading card template
-                let tabParent = document.getElementsByClassName("tabs")[0];
-                let tabChild = tabParent.getElementsByTagName("div");
-                let eventContainer = document.getElementsByClassName("eventsContainer")[0];
+                    // Loading card template
+                    let tabParent = document.getElementsByClassName("tabs")[0];
+                    let tabChild = tabParent.getElementsByTagName("div");
+                    let eventContainer = document.getElementsByClassName("eventsContainer")[0];
 
-                let eventHtml = document.getElementById("placeholderEvent").innerHTML;
-                let activeTab = -1;
-                for (let i = 0; i < tabChild.length; i++) {
-                    if(tabChild[i].classList.contains("active")){
-                        activeTab = i;
+                    let eventHtml = document.getElementById("placeholderEvent").innerHTML;
+                    let activeTab = -1;
+                    for (let i = 0; i < tabChild.length; i++) {
+                        if (tabChild[i].classList.contains("active")) {
+                            activeTab = i;
+                        }
                     }
-                }
-                
 
-                // Select only events relavant to current tab
-                let currDate = new Date();
-                let eventDate = data.dateTime.toDate();
-                let monthsDiff;
-                monthsDiff = (eventDate.getFullYear() - currDate.getFullYear()) * 12;
-                monthsDiff -= currDate.getMonth();
-                monthsDiff += eventDate.getMonth();
-                if (monthsDiff === 0 && activeTab !== 1){
-                    return;
-                }
-                if (monthsDiff < 0 && activeTab !== 0){
-                    return;
-                }
-                if (monthsDiff > 0 && activeTab !== 2){
-                    return;
-                }
 
-                // Creating an element
-                let eventElement = document.createElement("div");
-                eventElement.classList.add("eventCard");
-                eventElement.innerHTML = eventHtml;
-                
-                // Adding data
-                let titleTextElement = eventElement.getElementsByClassName("eventTitleText")[0];
-                titleTextElement.innerText = data.title;
-
-                let descriptionTextElement = eventElement.getElementsByClassName("eventDescriptionText")[0]
-                descriptionTextElement.innerText = data.description;
-
-                let timeDateElement = eventElement.getElementsByClassName("eventTimeInfo")[0];
-                let dateOptions = { 
-                    dateStyle: "full",
-                    timeStyle: "medium"
-                };
-                timeDateElement.innerText = data.dateTime.toDate().toLocaleString("hi-IN", dateOptions);
-
-                let registrationElement = eventElement.getElementsByClassName("eventRegistrationAnchor")[0];
-                registrationElement.setAttribute("href", data.registrationLink)
-                
-                eventContainer.appendChild(eventElement);
-                
-            });
-        }
-
-        await fetchEventsFromFirebase();
-        let tabParent = document.getElementsByClassName("tabs")[0]
-        let tabChild = tabParent.getElementsByTagName("div")
-        let tabView = document.getElementsByClassName("tabView")[0]
-
-        for (let i = 0; i < tabChild.length; i++) {
-            // tabView
-            tabChild[i].addEventListener("click", async function(){
-                tabParent.getElementsByClassName("active")[0].classList.remove("active");
-                tabChild[i].classList.add("active");
-
-                // Remove non-active children
-                let eventContainer = document.getElementsByClassName("eventsContainer")[0];
-                let eventChildren = eventContainer.children;
-                let placeholderElement;
-                for(let child = 0;child < eventChildren.length;child++){
-                    let childElement = eventChildren[child];
-                    if(childElement.id === "placeholderEvent"){
-                        placeholderElement = childElement;
+                    // Select only events relavant to current tab
+                    let currDate = new Date();
+                    let eventDate = data.dateTime.toDate();
+                    let monthsDiff;
+                    monthsDiff = (eventDate.getFullYear() - currDate.getFullYear()) * 12;
+                    monthsDiff -= currDate.getMonth();
+                    monthsDiff += eventDate.getMonth();
+                    if (monthsDiff === 0 && activeTab !== 1) {
+                        return;
                     }
-                }
-                while(eventChildren.length > 0){
-                    eventChildren[0].remove();
-                }
-                eventContainer.appendChild(placeholderElement);
+                    if (monthsDiff < 0 && activeTab !== 0) {
+                        return;
+                    }
+                    if (monthsDiff > 0 && activeTab !== 2) {
+                        return;
+                    }
 
-                await fetchEventsFromFirebase();
-            })
-        }
+                    // Creating an element
+                    let eventElement = document.createElement("div");
+                    eventElement.classList.add("eventCard");
+                    eventElement.innerHTML = eventHtml;
+
+                    // Adding data
+                    let titleTextElement = eventElement.getElementsByClassName("eventTitleText")[0];
+                    titleTextElement.innerText = data.title;
+
+                    let descriptionTextElement = eventElement.getElementsByClassName("eventDescriptionText")[0]
+                    descriptionTextElement.innerText = data.description;
+
+                    let timeDateElement = eventElement.getElementsByClassName("eventTimeInfo")[0];
+                    let dateOptions = {
+                        dateStyle: "full",
+                        timeStyle: "medium"
+                    };
+                    timeDateElement.innerText = data.dateTime.toDate().toLocaleString(dateOptions);
+
+                    let registrationElement = eventElement.getElementsByClassName("eventRegistrationAnchor")[0];
+                    registrationElement.setAttribute("href", data.registrationLink)
+
+                    eventContainer.appendChild(eventElement);
+
+                });
+            }
+
+            await fetchEventsFromFirebase();
+            let tabParent = document.getElementsByClassName("tabs")[0]
+            let tabChild = tabParent.getElementsByTagName("div")
+            let tabView = document.getElementsByClassName("tabView")[0]
+
+            for (let i = 0; i < tabChild.length; i++) {
+                // tabView
+                tabChild[i].addEventListener("click", async function () {
+                    tabParent.getElementsByClassName("active")[0].classList.remove("active");
+                    tabChild[i].classList.add("active");
+
+                    // Remove non-active children
+                    let eventContainer = document.getElementsByClassName("eventsContainer")[0];
+                    let eventChildren = eventContainer.children;
+                    let placeholderElement;
+                    for (let child = 0; child < eventChildren.length; child++) {
+                        let childElement = eventChildren[child];
+                        if (childElement.id === "placeholderEvent") {
+                            placeholderElement = childElement;
+                        }
+                    }
+                    while (eventChildren.length > 0) {
+                        eventChildren[0].remove();
+                    }
+                    eventContainer.appendChild(placeholderElement);
+
+                    await fetchEventsFromFirebase();
+                })
+            }
         </script>
     </body>
 

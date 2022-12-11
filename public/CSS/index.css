@@ -233,7 +233,7 @@ hr {
 }
 
 .eventsOffered {
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 
@@ -246,11 +246,35 @@ hr {
 
 .eventBox {
     margin-top: 20px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     ;
 }
 
-.eventBox .event {}
+.eventBox .event {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.event .eveImg img {
+    min-width: 40vw;
+    max-width: 55vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+}
+
+.event .info {
+    margin: 10px 0;
+
+}
 
 @media only screen and (min-width: 940px) {
 
@@ -281,4 +305,19 @@ hr {
     }
 
     .desktop--items ul li:hover {}
+
+    .event .eventInfo .eveImg img {
+        min-width: 40vw;
+        max-width: 55vw;
+    }
+
+    .eve3 .eventInfo .eveImg img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 33vw;
+        max-width: 40vw;
+    }
+
+
 }
