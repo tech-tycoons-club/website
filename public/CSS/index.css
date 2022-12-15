@@ -140,7 +140,7 @@ nav .mobile--menu .burger {
 .mobmenu--items ul li a:hover,
 .desktop--items ul li a:hover {
     background-color: rgb(46, 46, 66);
-    color: #fff;
+    color: #fff !important;
     transition: all 0.5s;
 
 }
@@ -149,7 +149,9 @@ header {
     font-size: 36px;
     height: 80vh;
     text-align: center;
-
+    justify-content: center;
+    gap: 30px;
+    /* position: relative; */
 }
 
 header .name {
@@ -264,19 +266,34 @@ hr {
 
 .event .eveImg img {
     min-width: 40vw;
-    max-width: 55vw;
+    max-width: 75vw;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 25px auto;
     /* width: 50%; */
+}
+
+.eve3 .eveImg img {
+    margin: 0 auto;
 }
 
 .event .info {
     margin: 10px 0;
+}
+
+.footerBox {
+    text-align: center;
+    background-color: rgb(107 33 107);
+    padding: 10px;
+    height: 15vh;
 
 }
 
-@media only screen and (min-width: 940px) {
+footer {
+    color: #fff;
+    font-size: 15px;
+}
+
+@media only screen and (min-width: 960px) {
 
     .mobile--menu,
     .mobmenu--items--hidden {
@@ -292,6 +309,12 @@ hr {
     nav {
         gap: 50px;
         align-items: center;
+    }
+
+    header {
+        justify-content: space-around;
+        position: relative;
+        top: 100px;
     }
 
     .desktop--items ul {

@@ -11,12 +11,8 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    /* gap: 10px; */
-    /* width: 100%; */
     font-size: 1.2em;
     gap: 10px;
-    /* border: 2px solid red; */
-    ;
 }
 
 .tabs .tab {
@@ -24,6 +20,7 @@
     background-color: rgba(254, 255, 254, 0.658);
     padding: 10px;
     font-weight: bold;
+    cursor: pointer
 }
 
 .tabs>.active {
@@ -36,10 +33,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    /* border: 2px solid red; */
-    ;
     width: 90%;
-    /* height: fit-content; */
     margin-top: 15px;
 
 }
@@ -48,10 +42,10 @@
 /* orz code */
 .eventsContainer {
     display: grid;
-    row-gap: 20px;
+    gap: 30px;
     grid-template-columns: repeat(auto-fit, 1fr);
-    justify-content: center;
-    /* border: 2px solid red; */
+    place-items: center;
+
 }
 
 .eventRegistrationForm a {
@@ -60,13 +54,13 @@
 }
 
 .eventCard {
-    /* display: inline-grid; */
-    /* border: 2px solid red; */
     text-align: left;
     height: fit-content;
     border-radius: 20px;
-    box-shadow: 0 2px 3px rgb(117 108 108 / 39%);
-    width: 100%;
+    box-shadow: 0 3px 12px rgb(130 113 113 / 55%);
+    max-width: 70vw;
+    padding: 10px 10px 0;
+    background-color: #fff;
 }
 
 .eventCardImage {
@@ -164,13 +158,13 @@
 
     .eventsContainer {
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 20px;
         min-width: fit-content;
-        /* place-items: center; */
+        place-items: baseline;
     }
 
     .eventCard {
         max-width: 40vw;
+        transform: scale(0.92);
     }
 
     .eventDetailsContainer {

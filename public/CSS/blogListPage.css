@@ -23,13 +23,10 @@
     /* align-items: ce; */
 }
 
-.relatedTopics {
-    /* background-color: #fff; */
-}
 
 .relatedTopics .topics {
     list-style: none;
-
+    font-size: 13px;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -38,13 +35,18 @@
 }
 
 .topics li {
+    cursor: pointer;
     width: fit-content;
     background-color: rgb(221 210 210 / 44%);
     padding: 10px;
     height: fit-content;
     border-radius: 20px;
-    font-size: 10px;
     transform: scale(0.85);
+    text-align: center;
+}
+
+.topics li:hover {
+    background-color: #808c8c78;
 }
 
 .blogsList {
@@ -104,12 +106,31 @@
 .mainPart {
     display: flex;
     justify-content: space-between;
-    gap: 10px
+    gap: 20px;
 }
 
 .mainPart .blogImg img {
     width: 80px;
     height: 50px;
+}
+
+.mainPart .content a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.mainPart .content a {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.mainPart .content a .title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "sans-serif";
 }
 
 .bottomPart {

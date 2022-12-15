@@ -128,7 +128,7 @@ nav .mobile--menu .burger {
 .mobmenu--items ul li a:hover,
 .desktop--items ul li a:hover {
     background-color: rgb(46, 46, 66);
-    color: #fff;
+    color: #fff !important;
     transition: all 0.5s;
 
 }
@@ -168,7 +168,18 @@ hr {
 
 }
 
+.footerBox {
+    text-align: center;
+    background-color: rgb(107 33 107);
+    padding: 10px;
+    height: 15vh;
 
+}
+
+footer {
+    color: #fff;
+    font-size: 15px;
+}
 
 @media only screen and (min-width: 940px) {
 
