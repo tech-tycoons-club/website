@@ -20,7 +20,8 @@ mobMenu.addEventListener("click", () => {
 let navbar = document.getElementById("navbar")
 let deskul = document.getElementsByClassName("desk--ul")
 let burg = document.getElementsByClassName("burger")
-console.log(deskul)
+let navbg = document.getElementById("dropdown")
+// console.log(deskul)
 window.addEventListener("scroll", navfun)
 window.addEventListener("touchmove", navfun)
 
@@ -39,7 +40,8 @@ function navfun(e) {
         for (let i = 0; i < burg.length; i++) {
             burg[i].style.backgroundColor = "#000"
         }
-
+        navbg.style.backgroundColor = "#ded8ed"
+        console.log(navbg)
     }
 
     if (screenWidth < 940 && top >= 0 && left >= 0) {
@@ -50,6 +52,8 @@ function navfun(e) {
         for (let i = 0; i < burg.length; i++) {
             burg[i].style.backgroundColor = "#000"
         }
+
+        navbg.style.backgroundColor = "#ded8ed"
     }
     else {
 
@@ -59,5 +63,6 @@ function navfun(e) {
         for (let i = 0; i < burg.length; i++) {
             burg[i].style.backgroundColor = "#fff"
         }
+        navbg.style.backgroundColor = "#fff"
     }
 }

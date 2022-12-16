@@ -77,6 +77,7 @@ mobMenu.addEventListener("click", () => {
 let navbar = document.getElementById("navbar")
 let deskul = document.getElementsByClassName("desk--ul")
 let burg = document.getElementsByClassName("burger")
+
 console.log(deskul)
 window.addEventListener("scroll", () => {
     let top = window.scrollX || document.documentElement.scrollTop;
@@ -91,6 +92,8 @@ window.addEventListener("scroll", () => {
             burg[i].style.backgroundColor = "#000"
         }
 
+        mobItems.style.backgroundColor = "#ded8ed"
+
     }
     else {
         for (let i = 0; i < deskul.length; i++) {
@@ -99,5 +102,6 @@ window.addEventListener("scroll", () => {
         for (let i = 0; i < burg.length; i++) {
             burg[i].style.backgroundColor = "#fff"
         }
+        mobItems.style.backgroundColor = "#fff"
     }
 })

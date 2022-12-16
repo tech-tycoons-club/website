@@ -96,7 +96,7 @@ nav .mobile--menu .burger {
     width: 81%;
     left: 10vw;
     visibility: visible;
-    transition: top 0.2s, visibility 0.3s;
+    transition: top 0.2s, visibility 0.3s, backgound-color 0.3s;
 }
 
 .mobmenu--items--hidden {
@@ -280,17 +280,46 @@ hr {
     margin: 10px 0;
 }
 
-.footerBox {
-    text-align: center;
-    background-color: rgb(107 33 107);
-    padding: 10px;
-    height: 15vh;
+.msgBox {
+    margin-top: 30px;
 
+    border: 2px solid red;
 }
 
-footer {
-    color: #fff;
-    font-size: 15px;
+.msgLayout {
+    height: 70vh;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.msgLayout .hodInfo {
+    /* border: 2px solid red; */
+    text-align: center;
+}
+
+.msgLayout .hodInfo img {
+    height: 16vh;
+    aspect-ratio: 1;
+    padding: 10px;
+    border-radius: 100px;
+    box-shadow: 0 1px 20px rgb(136 125 125 / 35%);
+    margin-bottom: 5px;
+}
+
+.hodInfo p {
+    font-size: 20px;
+    color: rgb(2, 28, 42);
+    font-weight: bold;
+}
+
+.hodInfo p span {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+    line-height: 20px;
 }
 
 @media only screen and (min-width: 960px) {

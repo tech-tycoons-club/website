@@ -145,7 +145,8 @@ nav .mobile--menu .burger {
 
 main .membersLayout,
 main .eventsLayout,
-main .blogPageLayout {
+main .blogPageLayout,
+main .msgBox {
     /* border: 2px solid red; */
     height: 100%;
     padding: 20px;
@@ -154,7 +155,8 @@ main .blogPageLayout {
 
 .membersLayout h2,
 .eventsLayout h2,
-.blogPageLayout h2 {
+.blogPageLayout h2,
+.msgBox h2 {
     font-size: 27px;
     margin-left: -12px;
 }
@@ -168,7 +170,7 @@ hr {
 
 }
 
-.footerBox {
+/* .footerBox {
     text-align: center;
     background-color: rgb(107 33 107);
     padding: 10px;
@@ -179,7 +181,7 @@ hr {
 footer {
     color: #fff;
     font-size: 15px;
-}
+} */
 
 @media only screen and (min-width: 940px) {
 
