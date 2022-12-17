@@ -194,8 +194,12 @@
                     let registrationElement = eventElement.getElementsByClassName("eventRegistrationAnchor")[0];
                     registrationElement.setAttribute("href", data.registrationLink)
 
-                    eventContainer.appendChild(eventElement);
+                    if(monthsDiff !== 0){
+                        let registrationContainer = eventElement.getElementsByClassName("eventRegistrationForm")[0];
+                        registrationContainer.style.display = "none";
+                    }
 
+                    eventContainer.appendChild(eventElement);
                 });
             }
 
