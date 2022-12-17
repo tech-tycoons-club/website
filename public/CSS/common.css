@@ -25,6 +25,11 @@ body {
 
 }
 
+.placeholder{
+    color: inherit;
+    text-decoration: none;
+}
+
 nav {
     height: 10vh;
     position: fixed;
