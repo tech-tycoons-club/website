@@ -176,6 +176,9 @@
                     let descriptionTextElement = eventElement.getElementsByClassName("eventDescriptionText")[0]
                     descriptionTextElement.innerText = data.description;
 
+                    let imageElement = eventElement.getElementsByClassName("eventCardImage")[0];
+                    imageElement.setAttribute("src", data.logo);
+
                     let timeDateElement = eventElement.getElementsByClassName("eventTimeInfo")[0];
                     let dateOptions = {
                         dateStyle: "full",
