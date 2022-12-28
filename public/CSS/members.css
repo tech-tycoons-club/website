@@ -191,6 +191,7 @@ hr {
     transform: scale(0.85);
     max-width: 80vw;
     max-height: fit-content;
+    min-width: 70vw;
 
 }
 
@@ -215,7 +216,8 @@ hr {
 }
 
 .name {
-    font-size: 1.6em;
+    font-size: 1.5em;
+    padding: 0 10px;
 
 }
 
@@ -268,25 +270,32 @@ hr {
     box-shadow: 0px 1px 15px #afa6a687;
 }
 
-@media screen and (max-width:440px) {
+@media screen and (max-width:450px) {
     .container {
         max-width: 84vw;
-        min-height: 60vh;
+        min-height: 55vh;
+        min-width: 77vw;
     }
 }
 
-@media screen and (min-width:450px) {
+@media screen and (min-width:470px) {
     .container {
-        max-width: 60vw;
+        max-width: 75vw;
+        min-width: 60vw;
     }
 }
 
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:750px) {
 
     /* write the responsive code for members code especially for tablets here */
     .membersBox {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        min-width: 47vw;
+        max-width: 60vw;
     }
 }
 
@@ -330,7 +339,8 @@ hr {
 
     .container {
         max-width: 60vw;
-        max-height: 72vh;
+        max-height: 70vh;
+        min-width: 32vw;
     }
 }
 
@@ -341,6 +351,7 @@ hr {
     .container {
         max-width: 25vw;
         max-height: 72vh;
+        min-width: 23vw;
         transform: scale(0.8);
     }
 

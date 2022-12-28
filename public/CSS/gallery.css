@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,400;0,700;1,300;1,400&family=Poppins:wght@300;400;500&family=Quicksand:wght@300;400;500;600&family=Zen+Dots&display=swap');
+
+.galleryLayout {
+    /* border: 2px solid red; */
+    /* padding: 15px 0; */
+    height: 100%;
+
+}
+
+.galleryLayout .galNote {
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+.galAccordionBox .accordion {
+    margin: 20px 11px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0 10px;
+    background-color: rgb(239 239 239);
+    height: 8vh;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 5px;
+    box-shadow: 2px;
+    box-shadow: 0 4px 14px #d2cdcd;
+}
+
+
+
+.event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.swiper {
+    width: 100%;
+}
+
+
+.swiper-slide img {
+    height: 20vw;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 8px 7px 20px #d2cdcd;
+}
+
+.mainWindow img {
+    width: 100%;
+    z-index: 0;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 8px 7px 20px #d2cdcd;
+}
+
+.swipe-btn,
+.swipe-pag {
+    /* top: 80vw; */
+    z-index: 10000;
+    position: fixed;
+}
+
+.swipe-btn {
+    top: 80%;
+}
+
+@media only screen and (min-width:960px) {
+    .swiper-slide img {
+        /* width: 10vw; */
+        aspect-ratio: 1;
+    }
+
+    .mainWindow img {
+        /* width: 65vw; */
+        z-index: 0;
+        position: relative;
+    }
+
+    .swipe-btn {
+        top: 50%;
+    }
+}
+
+@media only screen and (min-width:1160px) {
+    .swiper-slide img {
+        /* width: 10vw; */
+        /* aspect-ratio: 1; */
+        /* height: 20vh; */
+        width: 100%;
+        transform: scale(0.7);
+    }
+
+
+    .mainWindow img {
+
+        z-index: 0;
+        position: relative;
+        /* height: 52vh; */
+        width: 100%;
+        /* max-width: 80%; */
+        /* aspect-ratio: 1; */
+    }
+
+    .swipe-btn,
+    .swipe-pag {
+        /* top: 45vw; */
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .swipe-pag {
+        top: 100%
+    }
+
+    .event {
+        transform: scale(0.85);
+    }
+
+
+}

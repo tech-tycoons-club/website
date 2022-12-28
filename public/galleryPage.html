@@ -29,8 +29,17 @@
         <!-- <link rel="stylesheet" href="./CSS/index.css"> -->
         <link rel="stylesheet" href="./CSS/common.css">
         <link rel="stylesheet" href="./CSS/utility.css">
-        <link rel="stylesheet" href="./CSS/members.css">
-
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./CSS/gallery.css">
+        <style>
+            .swipe-btn,
+            .swipe-pag {
+                /* top: 80vw; */
+                z-index: 10000;
+                position: fixed;
+            }
+        </style>
     </head>
 
     <body>
@@ -44,18 +53,15 @@
                     </div>
                     <div class="desktop--items">
                         <ul id="desk--ul">
-                            <li class="mob--list"><a href="./eventsPage.html" 
-                                    rel="noopener noreferrer">Events &
+                            <li class="mob--list"><a href="./eventsPage.html" rel="noopener noreferrer">Events &
                                     Registration</a></li>
-                            <li class="mob--list"><a href="./galleryPage.html" 
-                                    rel="noopener noreferrer">Gallery</a>
+                            <li class="mob--list"><a href="./galleryPage.html" rel="noopener noreferrer">Gallery</a>
                             </li>
-                            <li class="mob--list"><a href="./blogPage.html" 
-                                    rel="noopener noreferrer">Blog</a></li>
-                            <li class="mob--list"><a href="./membersPage.html" 
-                                    rel="noopener noreferrer">Members</a>
+                            <li class="mob--list"><a href="./blogPage.html" rel="noopener noreferrer">Blog</a></li>
+                            <li class="mob--list"><a href="./membersPage.html" rel="noopener noreferrer">Members</a>
                             </li>
-                            <li class="mob--list"><a href="#"  rel="noopener noreferrer">Achievements</a>
+                            <li class="mob--list"><a href="./achievements.html"
+                                    rel="noopener noreferrer">Achievements</a>
                             </li>
                         </ul>
                     </div>
@@ -66,18 +72,15 @@
                     </div>
                     <div class="mobmenu--items--hidden" id="dropdown">
                         <ul class="mob--ul">
-                            <li class="mob--list"><a href="./eventsPage.html" 
-                                    rel="noopener noreferrer">Events &
+                            <li class="mob--list"><a href="./eventsPage.html" rel="noopener noreferrer">Events &
                                     Registration</a></li>
-                            <li class="mob--list"><a href="./galleryPage.html" 
-                                    rel="noopener noreferrer">Gallery</a>
+                            <li class="mob--list"><a href="./galleryPage.html" rel="noopener noreferrer">Gallery</a>
                             </li>
-                            <li class="mob--list"><a href="./blogPage.html" 
-                                    rel="noopener noreferrer">Blog</a></li>
-                            <li class="mob--list"><a href="./membersPage.html" 
-                                    rel="noopener noreferrer">Members</a>
+                            <li class="mob--list"><a href="./blogPage.html" rel="noopener noreferrer">Blog</a></li>
+                            <li class="mob--list"><a href="./membersPage.html" rel="noopener noreferrer">Members</a>
                             </li>
-                            <li class="mob--list"><a href="#"  rel="noopener noreferrer">Achievements</a>
+                            <li class="mob--list"><a href="./achievements.html"
+                                    rel="noopener noreferrer">Achievements</a>
                             </li>
                         </ul>
                     </div>
@@ -86,16 +89,102 @@
             </div>
             <div class="galleryMain">
                 <main>
-                    <div class="galleryLayout">
+                    <div class="galleryBox">
                         <h2>Our Events Gallery
                         </h2>
                         <hr>
-                    </div>
-                    <div class="galleryBox">
+                        <div class="galleryLayout">
+                            <div class="galNote">
+                                <p>In this page, we feature the pictures we take on the day an event is conducted.
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero corrupti sed et.
+                                    Architecto, odit quod. Quia iure neque assumenda nihil?
+                                </p>
+                            </div>
+                            <div class="galAccordionBox">
+                                <div class="accordion event1Gal" id="showImg">
+                                    <p>Event 1: Technical Quiz </p>
+                                    <i id="arrow" class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="event eve1Pics" id="container">
+                                    <div class="container swiper mySwiper">
+                                        <div class="picsRow swiper-wrapper">
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="1"
+                                                    src="https://drive.google.com/uc?export=view&id=1GYI6SVoFb4lOL5lBsK4XP7cw3zzlT8nD"
+                                                    alt=""></div>
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="2"
+                                                    src="https://matrusri.edu.in/wp-content/uploads/2022/11/WhatsApp-Image-2022-11-25-at-16.58.55.jpeg"
+                                                    alt=""></div>
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="3"
+                                                    src="https://matrusri.edu.in/wp-content/uploads/2020/12/cognizant-selects-2020.png"
+                                                    alt=""></div>
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="4"
+                                                    src="https://picsum.photos/700/400" alt=""></div>
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="5"
+                                                    src="https://picsum.photos/700/400" alt=""></div>
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="6"
+                                                    src="https://picsum.photos/700/400" alt=""></div>
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="7"
+                                                    src="https://picsum.photos/700/400" alt=""></div>
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="8"
+                                                    src="https://picsum.photos/700/400" alt=""></div>
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="9"
+                                                    src="https://picsum.photos/700/400" alt=""></div>
+                                            <div class="swiper-slide"><img class="swipe--img" data-index="10"
+                                                    src="https://picsum.photos/700/400" alt=""></div>
+                                        </div>
 
+                                    </div>
+                                    <div class="mainWindow">
+                                        <img id="main" src="https://picsum.photos/700/400" alt="">
+                                        <div class="swiper-button-next swipe-btn"></div>
+                                        <div class="swiper-button-prev swipe-btn"></div>
+                                        <div class="swiper-pagination swipe-pag"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </div>
+            <script src="./JS/navbar.js"></script>
+            <script src="./JS/gallerySelect.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+                integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <!-- Swiper JS -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                    slidesPerGroup: 4,
+                    loop: true,
+                    loopFillGroupWithBlank: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+            <script>
+                var ele = document.getElementById("showImg")
+                $(document).ready(function () {
+                    $("#container").hide();
+                });
+                $("#showImg").click(function () {
+                    $("#container").toggle(() => {
+                        $("#arrow").attr('class') == "fa-solid fa-chevron-down" ? $("#arrow").attr('class', "fa-solid fa-chevron-up") : $("#arrow").attr('class', "fa-solid fa-chevron-down")
+                    });
+                });
+
+            </script>
     </body>
 
 </html>

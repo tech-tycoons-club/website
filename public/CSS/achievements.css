@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,400;0,700;1,300;1,400&family=Poppins:wght@300;400;500&family=Quicksand:wght@300;400;500;600&family=Zen+Dots&display=swap');
+
+.certificationsBox,
+.publicationsBox {
+    margin-top: 10px;
+    padding: 8px;
+}
+
+.certificationsBox h3,
+.publicationsBox h3 {
+    font-size: 25px;
+}
+
+.certificationsLayout,
+.publicationsLayout {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    place-items: center;
+    gap: 30px;
+}
+
+.certificationsLayout .certBox,
+.publicationsLayout .certBox {
+    /* text-align: left; */
+    /* border-radius: 20px; */
+    box-shadow: 0 3px 12px rgb(219 215 215 / 55%);
+    padding: 10px 10px 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+
+    height: fit-content;
+    max-width: 75vw;
+    min-width: 25vw;
+    min-height: 55vh;
+}
+
+.certOrgImg {
+    width: 100%;
+    height: 60%;
+    border-radius: 20px;
+    text-align: center;
+    transform: scale(0.7);
+}
+
+.certificationsLayout .linkToCertificate,
+.publicationsLayout .linkToCertificate {
+    text-align: center;
+}
+
+.certificationsLayout .linkToCertificate a,
+.publicationsLayout .linkToCertificate a {
+    text-decoration: none;
+    background-color: #777ba3;
+    color: #fff;
+    padding: 5px;
+}
+
+@media only screen and (min-width:768px) {
+
+    .certificationsLayout,
+    .publicationsLayout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (min-width:1068px) {
+
+    .certificationsLayout,
+    .publicationsLayout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
