@@ -22,10 +22,10 @@ let deskul = document.getElementsByClassName("desk--ul")
 let burg = document.getElementsByClassName("burger")
 let navbg = document.getElementById("dropdown")
 // console.log(deskul)
-window.addEventListener("scroll", navfun)
-window.addEventListener("touchmove", navfun)
+// window.addEventListener("scroll", navfun)
+// window.addEventListener("touchmove", navfun)
 
-function navfun(e) {
+function navfun() {
     let top = window.scrollX || document.documentElement.scrollTop;
     let left = window.scrollY || document.documentElement.scrollLeft;
 
@@ -66,3 +66,4 @@ function navfun(e) {
         navbg.style.backgroundColor = "#fff"
     }
 }
+navfun()

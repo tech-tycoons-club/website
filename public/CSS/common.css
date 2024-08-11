@@ -38,6 +38,11 @@ nav {
     padding: 20px;
     backdrop-filter: blur(15px);
     /* color: #fff; */
+    /* changes for tomorrow */
+    height: 13vh;
+    background-color: rgb(16 19 42 / 82%);
+    align-items: center;
+    /* temp changes end */
 }
 
 .desktop--items {
@@ -49,16 +54,19 @@ nav .mobile--menu {
     margin-top: 3px;
     margin-right: 7px;
     cursor: pointer;
+    color: #fff;
 }
 
 nav .mobile--menu .burger {
     width: 40px;
     height: 4px;
     border-radius: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     scale: 0.75;
     transition: all 0.5s;
 }
+
+
 
 
 .top {
@@ -75,6 +83,13 @@ nav .mobile--menu .burger {
     transform: translateY(-10px) rotate(-45deg);
 }
 
+.logobox a img {
+
+    height: fit-content;
+    /* border: 2px solid red; */
+    height: 10vh;
+    /* width: 100%; */
+}
 
 .mobmenu--items,
 .mobmenu--items--hidden {
@@ -120,6 +135,7 @@ nav .mobile--menu .burger {
 .desktop--items ul li a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+    /* color: #fff; */
     padding: 10px;
     width: 100%;
     border-radius: 15px;
@@ -127,7 +143,7 @@ nav .mobile--menu .burger {
 }
 
 .desktop--items ul li a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .mobmenu--items ul li a:hover,

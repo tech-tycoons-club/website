@@ -1,35 +1,62 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tech Tycoons Club</title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/9.14.0/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/9.14.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-messaging-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.14.0/firebase-database-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.14.0/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.14.0/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.14.0/firebase-messaging-compat.js"
+    ></script>
     <script defer src="/__/firebase/9.14.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-performance-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.14.0/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.14.0/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.14.0/firebase-performance-compat.js"
+    ></script>
     <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-
     <!-- CSS and Fonts -->
-    <link rel="stylesheet" href="./CSS/common.css">
-    <link rel="stylesheet" href="./CSS/index.css">
-    <link rel="stylesheet" href="./CSS/utility.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./CSS/common.css" />
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link rel="stylesheet" href="./CSS/utility.css" />
+    <link
+      rel="shortcut icon"
+      href="./Images/logoMainn-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
@@ -39,21 +66,59 @@
       <div class="after-bg">
         <nav class="flex just-between" id="navbar">
           <div class="logobox">
-            <a class="placeholder" href="./index.html" rel="noopener noreferrer">
-              <img class="logoImg" src="../Images/logo2.png" alt="">
+            <a
+              class="placeholder"
+              href="./index.html"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="logoImg"
+                src="./Images/logoMainn-removebg-preview.png"
+                alt="logo"
+              />
             </a>
           </div>
           <div class="desktop--items">
             <ul>
-              <li class="mob--list"><a class="desk--ul" href="./eventsPage.html" rel="noopener noreferrer">Events &
-                  Registration</a></li>
-              <li class="mob--list"><a class="desk--ul" href="./galleryPage.html" rel="noopener noreferrer">Gallery</a>
+              <li class="mob--list">
+                <a
+                  class="desk--ul"
+                  href="./eventsPage.html"
+                  rel="noopener noreferrer"
+                  >Events</a
+                >
               </li>
-              <li class="mob--list"><a class="desk--ul" href="./blogPage.html" rel="noopener noreferrer">Blog</a></li>
-              <li class="mob--list"><a class="desk--ul" href="./membersPage.html" rel="noopener noreferrer">Members</a>
+              <li class="mob--list">
+                <a
+                  class="desk--ul"
+                  href="./galleryPage.html"
+                  rel="noopener noreferrer"
+                  >Gallery</a
+                >
               </li>
-              <li class="mob--list"><a class="desk--ul" href="./achievements.html"
-                  rel="noopener noreferrer">Achievements</a>
+              <li class="mob--list">
+                <a
+                  class="desk--ul"
+                  href="./blogPage.html"
+                  rel="noopener noreferrer"
+                  >Blog</a
+                >
+              </li>
+              <li class="mob--list">
+                <a
+                  class="desk--ul"
+                  href="./membersPage.html"
+                  rel="noopener noreferrer"
+                  >Members</a
+                >
+              </li>
+              <li class="mob--list">
+                <a
+                  class="desk--ul"
+                  href="./achievements.html"
+                  rel="noopener noreferrer"
+                  >Achievements</a
+                >
               </li>
             </ul>
           </div>
@@ -64,29 +129,46 @@
           </div>
           <div class="mobmenu--items--hidden" id="dropdown">
             <ul class="mob--ul">
-              <li class="mob--list"><a href="./eventsPage.html" rel="noopener noreferrer">Events &
-                  Registration</a></li>
-              <li class="mob--list"><a href="./galleryPage.html" rel="noopener noreferrer">Gallery</a>
+              <li class="mob--list">
+                <a href="./eventsPage.html" rel="noopener noreferrer"
+                  >Events & Registration</a
+                >
               </li>
-              <li class="mob--list"><a href="./blogPage.html" rel="noopener noreferrer">Blog</a></li>
-              <li class="mob--list"><a href="./membersPage.html" rel="noopener noreferrer">Members</a>
+              <li class="mob--list">
+                <a href="./galleryPage.html" rel="noopener noreferrer"
+                  >Gallery</a
+                >
               </li>
-              <li class="mob--list"><a href="./achievements.html" rel="noopener noreferrer">Achievements</a></li>
+              <li class="mob--list">
+                <a href="./blogPage.html" rel="noopener noreferrer">Blog</a>
+              </li>
+              <li class="mob--list">
+                <a href="./membersPage.html" rel="noopener noreferrer"
+                  >Members</a
+                >
+              </li>
+              <li class="mob--list">
+                <a href="./achievements.html" rel="noopener noreferrer"
+                  >Achievements</a
+                >
+              </li>
             </ul>
           </div>
         </nav>
         <!-- header section -->
         <header class="flex flex-col">
-          <div class="name">
-            Tech Tycoons
-          </div>
+          <div class="name">Tech Tycoons</div>
 
           <div class="tagline">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vel!</p>
+            <p>Binding Technology with People</p>
           </div>
           <div class="summary">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vel!
+              A technical club as an initiative by the Department of Information
+              Technology,
+              <a class="clgLink" href="https://matrusri.edu.in/" target="_blank"
+                >Matrusri Engineering College</a
+              >
             </p>
           </div>
         </header>
@@ -94,166 +176,213 @@
     </div>
     <div class="main--box">
       <main>
-        <div class="missionBox">
-          <h2>Our Mission
-          </h2>
-          <hr>
-          <div class="m-imgBox"></div>
-          <ul class="mission--ul">
-            <li class="mission--items  li--decor">To encourage students to participate in world-class competitions.</li>
-            <li class="mission--items li--decor">To educate enthusiastic students in learning design and development.
-            </li>
-            <li class="mission--items li--decor">To enrich student's programming practices by inculcating industry-wide
-              coding style.</li>
-          </ul>
-        </div>
         <div class="visionBox">
-          <h2>Our Vision
-          </h2>
-          <hr>
+          <h2>Our Vision</h2>
+          <hr />
           <div class="v-imgBox"></div>
           <ul class="mission--ul">
-            <li class="mission--items  li--decor">
-              To foster development of technical and technological skills amongst students
-              in various aspects of programming and hardware, make them aware of industry ready practices
-              used in the field of CS and IT
+            <li class="mission--items li--decor">
+              To foster development of technical and technological skills
+              amongst students in various aspects of programming and hardware,
+              make them aware of industry ready practices used in the field of
+              CS and IT
             </li>
-
+          </ul>
+        </div>
+        <div class="missionBox">
+          <h2>Our Mission</h2>
+          <hr />
+          <div class="m-imgBox"></div>
+          <ul class="mission--ul">
+            <li class="mission--items li--decor">
+              To encourage students to participate in world-class competitions.
+            </li>
+            <li class="mission--items li--decor">
+              To educate enthusiastic students in learning design and
+              development.
+            </li>
+            <li class="mission--items li--decor">
+              To enrich student's programming practices by inculcating
+              industry-wide coding style.
+            </li>
           </ul>
         </div>
         <div class="eventsOffered">
-          <h2>Events by us
-          </h2>
-          <hr>
+          <h2>Events by us</h2>
+          <hr />
           <div class="note">
-            <p>Here at Tech Tycoons, we offer a wide range of events to build technical and
-              communication skills amongst our participants. </p>
-            <p>These events also establish industry-ready skills amongst our audience.</p>
-            <p> A sneak-peak at a couple of events organized by us include:</p>
+            <p>
+              Here at Tech Tycoons, we offer a wide range of events to build
+              technical and communication skills amongst our participants.
+            </p>
+            <p>
+              These events also establish industry-ready skills amongst our
+              audience.
+            </p>
+            <p>A sneak-peak at a couple of events organized by us include:</p>
           </div>
           <div class="eventBox">
             <div class="event eve1">
-              <h3>1) Technical Quiz
-              </h3>
+              <h3>1&rpar; Technical Quiz</h3>
               <div class="eventInfo">
                 <div class="eveImg">
-                  <img src="./Images/quiz.png" alt="">
+                  <img src="./Images/quiz.png" alt="" />
                 </div>
                 <div class="info">
-                  <p class="info--point">Quizzes would be designed to cultivate student's mind by asking inquisitive
-                    questionnaires. We will test student's problem solving and theoretical knowledge in tech.</p>
+                  <p class="info--point">
+                    Quizzes would be designed to cultivate student's mind by
+                    asking inquisitive questionnaires. We will test student's
+                    problem solving and theoretical knowledge in tech.
+                  </p>
 
-                  <p class="info--point">These would be conducted in increasing order of difficulty</p>
+                  <p class="info--point">
+                    These would be conducted in increasing order of difficulty
+                  </p>
                 </div>
               </div>
             </div>
             <div class="event eve2">
-              <h3>2) Seminars
-              </h3>
+              <h3>2&rpar; Seminars</h3>
               <div class="eventInfo">
                 <div class="eveImg">
-                  <img src="./Images/seminars.png" alt="">
+                  <img src="./Images/seminars.png" alt="" />
                 </div>
                 <div class="info">
-                  <p class="info--point">Seminars would be geared towards a wide range of IT domains. This would
-                    introduce applied-programming practices to make them ready for the
-                    real experiences. </p>
-
+                  <p class="info--point">
+                    Seminars would be geared towards a wide range of IT domains.
+                    This would introduce applied-programming practices to make
+                    them ready for the real experiences.
+                  </p>
                 </div>
               </div>
             </div>
             <div class="event eve3">
-              <h3>3) Hackathons
-              </h3>
+              <h3>3) Hackathons</h3>
               <div class="eventInfo">
                 <div class="eveImg">
-                  <img src="./Images/hackathon.png" alt="">
+                  <img src="./Images/hackathon.png" alt="" />
                 </div>
                 <div class="info">
-                  <p class="info--point">Hackathons would be organized to improve collaboration abilities of students.
-                    They will serve as a medium to introduce cutting edge
-                    technologies to students and make them industry-ready
+                  <p class="info--point">
+                    Hackathons would be organized to improve collaboration
+                    abilities of students. They will serve as a medium to
+                    introduce cutting edge technologies to students and make
+                    them industry-ready
                   </p>
                 </div>
               </div>
             </div>
             <div class="event eve4">
-              <h3>4)Coding competitions
-              </h3>
+              <h3>4)Coding competitions</h3>
               <div class="eventInfo">
                 <div class="eveImg">
-                  <img src="./Images/codingComp.png" alt="">
+                  <img src="./Images/codingComp.png" alt="" />
                 </div>
                 <div class="info">
-                  <p class="info--point">Coding competitions are organized to boost student's problem solving abilities.
-                    This would prepare them to face world-class coding competitions like
-                    ICPC, Google CodeJam, Meta HackerCup.
+                  <p class="info--point">
+                    Coding competitions are organized to boost student's problem
+                    solving abilities. This would prepare them to face
+                    world-class coding competitions like ICPC, Google CodeJam,
+                    Meta HackerCup.
                   </p>
-
                 </div>
               </div>
             </div>
             <div class="event eve5">
-              <h3>5) Paper Presentations
-              </h3>
+              <h3>5) Paper Presentations</h3>
               <div class="eventInfo">
                 <div class="eveImg">
-                  <img src="./Images/seminars.png" alt="">
+                  <img src="./Images/seminars.png" alt="" />
                 </div>
                 <div class="info">
-                  <p class="info--point">Paper presentations will be organized to aid innovative thinking in students.
-                    With a number of themes to choose from, paper presentations
-                    teach the process of innovation to students.
+                  <p class="info--point">
+                    Paper presentations will be organized to aid innovative
+                    thinking in students. With a number of themes to choose
+                    from, paper presentations teach the process of innovation to
+                    students.
                   </p>
-
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <div class="msgBox">
-          <h2>Message from the H.O.D
-          </h2>
-          <hr>
+          <h2>Message from the H.O.D and the Club Incharge</h2>
+          <hr />
           <div class="msgLayout">
             <div class="hodInfo">
-              <img src="./Images/ShyamSir.jpg" alt="Dr.G. Shyam">
-              <p class="info--point">Dr. G. Shyama Chandra Prasad <br>
-                <span>
-                  Associate Professor & Head of the Department</span>
+              <img src="./Images/ShyamSir.jpg" alt="Dr.G. Shyam" />
+              <p class="info--point">
+                Dr. G. Shyama Chandra Prasad <br />
+                <span> Professor & Head of the Department</span>
               </p>
             </div>
             <div class="msg">
-              <span>&#8221; <br></span>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse fugit ipsa
-                autem
-                officia harum
-                adipisci. </p>
+              <span>&#8221; <br /></span>
+              <p>
+                As quoted by Ken Poirot, "Today is the oppurtunity to build the
+                tomorrow you want", I wish you all a best tomorrow.
+              </p>
               <span class="bottom">&#8221;</span>
             </div>
           </div>
-
+          <div class="msgLayout">
+            <div class="headInfo">
+              <img src="./Images/SrinivasSir.jpg" alt="Dr.G. Shyam" />
+              <p class="info--point">
+                Dr. J. Srinivas<br />
+                <span> Associate Professor</span>
+              </p>
+            </div>
+            <div class="msg msghead">
+              <span>&#8221; <br /></span>
+              <p>Let noble thoughts come from all directions</p>
+              <span class="bottom">&#8221;</span>
+            </div>
+          </div>
         </div>
         <div class="contactUsSection">
-          <h2>Contact Us
-          </h2>
-          <hr>
+          <h2>Contact Us</h2>
+          <hr />
           <div class="contactBox">
             <p>Get in touch with us for more information</p>
-            <p>If you need help or have a question, we are here with the following social media presence</p>
+            <p>
+              If you need help or have a question, we are here with the
+              following social media presence
+            </p>
             <div class="icon">
-              <div class="icons f"><a href="#"><i class="fa fa-envelope"></i></a></div>
-              <div class="icons t"><a href="#"><i class="fa fa-twitter"></i></a></div>
-              <div class="icons i"><a href="#"><i class="fa fa-instagram"></i></a></div>
-              <div class="icons l"><a href="#"><i class="fa fa-github"></i></a></div>
+              <div class="icons f">
+                <a href="mailto:techtycoons.it.mecs@gmail.com"
+                  ><i class="fa fa-envelope"></i
+                ></a>
+              </div>
+              <div class="icons t">
+                <a href="https://twitter.com/TechTycoonsClub"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+              </div>
+              <div class="icons i">
+                <a
+                  href="https://www.instagram.com/techtycoonsclubmecs/?next=%2F"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </div>
+              <div class="icons l">
+                <a href="https://github.com/tech-tycoons-club"
+                  ><i class="fa fa-github"></i
+                ></a>
+              </div>
+              <a href="mailto:"></a>
             </div>
           </div>
         </div>
       </main>
     </div>
     <div class="final--touch">
-      <p> Made with &nbsp; <i class="fa fa-heart pulse"></i> &nbsp;by the dept. of IT, MECS.</p>
+      <p>
+        Made with &nbsp; <i class="fa fa-heart pulse"></i> &nbsp;by the dept. of
+        IT, MECS.
+      </p>
     </div>
     <!-- <div class="footerBox">
       <footer>
@@ -263,7 +392,5 @@
     <!-- <script src="./particlesjs-config.js"></script> -->
     <script type="text/javascript" src="./JS/particles.min.js"></script>
     <script type="text/javascript" src="./JS/custom.js"></script>
-
   </body>
-
 </html>

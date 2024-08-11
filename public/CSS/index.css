@@ -38,13 +38,16 @@ body {
 
 
 nav {
-    height: 16vh;
+    height: 12vh;
     position: fixed;
     top: 0;
     width: 100%;
     padding: 20px;
     backdrop-filter: blur(15px);
     color: #fff;
+    background-color: rgb(16 19 42 / 82%);
+    ;
+    align-items: center;
 }
 
 .desktop--items {
@@ -89,12 +92,11 @@ nav .mobile--menu .burger {
 
 
 .logobox a img {
-    /* background: url(../Images/logo2.png); */
-    /* display: none; */
+
     height: fit-content;
     /* border: 2px solid red; */
     height: 9vh;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .mobmenu--items,
@@ -172,6 +174,7 @@ header .name {
     font-family: "SAMARO__";
     font-size: 1.3em;
     color: #d3caca;
+    margin-top: 100px;
 }
 
 header .tagline,
@@ -180,6 +183,36 @@ header .summary {
     color: #d3caca;
 }
 
+.summary p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+/* changes for tomorrow */
+/* header .tagline {
+    margin: 0 100px 200px auto;
+    margin-left: auto;
+    margin-right: 100px;
+    margin-bottom: 200px
+}
+
+.tagline p {
+    font-family: auto;
+    font-size: 24px;
+    font-style: italic;
+}
+
+header .summary {
+    margin-bottom: 98px;
+    font-size: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+/* changes for tomorrow end */
 .main--box {
     padding: 20px;
     margin-top: 20px;
@@ -319,7 +352,14 @@ hr {
 
 }
 
-.msgLayout .hodInfo img {
+.msgLayout .headInfo {
+    /* border: 2px solid red; */
+    /* text-align: right; */
+    width: 100%;
+}
+
+.msgLayout .hodInfo img,
+.headInfo img {
     height: 12vh;
     aspect-ratio: 1;
     padding: 10px;
@@ -328,13 +368,19 @@ hr {
     margin-bottom: 5px;
 }
 
-.hodInfo p {
+.headInfo img {
+    height: 15vh;
+}
+
+.hodInfo p,
+.headInfo p {
     font-size: 20px;
     color: rgb(2, 28, 42);
     font-weight: bold;
 }
 
-.hodInfo p span {
+.hodInfo p span,
+.headInfo p span {
     font-size: 14px;
     color: #000;
     font-weight: 500;
@@ -350,6 +396,12 @@ hr {
     transform: rotate(180deg);
 }
 
+.msg p {
+    font-family: auto;
+    font-style: italic;
+    font-weight: 600;
+}
+
 .msg .bottom {
     position: relative;
     left: 80%;
@@ -358,13 +410,11 @@ hr {
 .contactBox {
     padding: 10px;
     margin: 10px 0;
-    /* border: 2px solid red; */
     width: 100%;
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
 
 }
 
@@ -441,6 +491,10 @@ hr {
 
 @media only screen and (min-width:760px) {
 
+    nav {
+        height: 15vh;
+    }
+
     header .name {
         font-size: 1.5em;
     }
@@ -470,16 +524,29 @@ hr {
 
     }
 
-    .msgLayout .hodInfo img {
+    .msgLayout .headInfo {
+        text-align: right;
+        margin-right: 15px;
+    }
+
+    .msgLayout .hodInfo img,
+    .msgLayout .headInfo img {
         height: 20vh;
     }
 
-    .msgLayout .hodInfo p {
+    .msgLayout .hodInfo p,
+    .msgLayout .headInfo p {
         color: #0036c6;
         font-size: 23px;
     }
 
     .msgLayout .msg {
+        margin-left: 0;
+        margin-right: 40px;
+        font-size: 1.3em;
+    }
+
+    .msgLayout .msghead {
         margin-left: auto;
         margin-right: 40px;
         font-size: 1.3em;
@@ -529,6 +596,10 @@ hr {
         align-items: center;
     }
 
+    .logobox a img {
+        height: 13vh;
+    }
+
     header {
         justify-content: space-around;
         position: relative;
@@ -545,7 +616,6 @@ hr {
         font-size: 18px;
     }
 
-    .desktop--items ul li:hover {}
 
     .event .eventInfo .eveImg img {
         min-width: 40vw;
@@ -571,6 +641,47 @@ hr {
     .final--touch {
         padding: 1.5%;
     }
+
+    .msgLayout .msghead {
+        margin-left: auto;
+        margin-right: 40px;
+        font-size: 1.3em;
+    }
+
+    /* changes for tomorrow */
+    .event h3 {
+        font-weight: 600;
+    }
+
+    header .name {
+        font-size: 35px;
+    }
+
+    header .tagline {
+        margin: 0 100px 200px auto;
+        /* margin-left: auto;
+        margin-right: 100px;
+        margin-bottom: 200px */
+    }
+
+    .tagline p {
+        font-family: auto;
+        font-size: 24px;
+        font-size: 30px;
+        font-style: italic;
+        color: #fff;
+    }
+
+    header .summary {
+        margin-bottom: 98px;
+        font-size: 30px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* temp changes end */
 }
 
 @media only screen and (min-width: 1100px) {

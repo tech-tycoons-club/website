@@ -88,7 +88,7 @@
 
 .topPart .authorImg a img {
     border-radius: 100px;
-    width: 75%;
+    width: 35px;
     vertical-align: middle;
 }
 
@@ -129,8 +129,8 @@
 
 .mainPart .content a .title {
     font-size: 20px;
-    font-weight: bold;
-    font-family: "sans-serif";
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
 }
 
 .bottomPart {

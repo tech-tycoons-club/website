@@ -26,7 +26,7 @@ body {
 }
 
 nav {
-    height: 10vh;
+    height: 13vh;
     position: fixed;
     top: 0;
     width: 100%;
@@ -95,7 +95,8 @@ nav .mobile--menu .burger {
 .mobmenu--items ul,
 .desktop--items ul {
     list-style: none;
-    color: #000;
+    /* color: #000;  temp change to white*/
+    color: #fff;
     font-size: 17px;
     display: flex;
     flex-direction: column;
@@ -114,7 +115,7 @@ nav .mobile--menu .burger {
 .mobmenu--items ul li a,
 .desktop--items ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
     padding: 10px;
     width: 100%;
     border-radius: 15px;
@@ -122,7 +123,7 @@ nav .mobile--menu .burger {
 }
 
 .desktop--items ul li a {
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); temp change */
 }
 
 .mobmenu--items ul li a:hover,
@@ -206,13 +207,12 @@ hr {
 }
 
 .profile-img {
-    width: 8rem;
-
-    clip-path: circle(60px at center);
+    width: 10rem;
+    clip-path: circle(55px at center);
     margin-top: 4.5rem;
-    /* changes */
-    transform: scale(0.85);
-    height: 20vh;
+    /* transform: scale(0.85); */
+    height: 21vh;
+    padding: 26px;
 }
 
 .name {
@@ -228,15 +228,7 @@ hr {
     font-weight: 500;
 }
 
-/* .btn {
-    width: 100%;
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: var(--clr-primary);
-    padding: 1rem;
-} */
+
 
 .branch {
     color: red;
@@ -342,6 +334,17 @@ hr {
         max-height: 70vh;
         min-width: 32vw;
     }
+
+    /* changes for tomorrow */
+    .profile-img {
+        width: 9rem;
+        clip-path: circle(38px at center);
+        margin-top: 5.5rem;
+        transform: scale(1.3);
+        height: 21vh;
+        padding: 32px;
+    }
+
 }
 
 
