@@ -3,7 +3,8 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
-  "hosting": {
+  "hosting": { 
+    "site": "tech-tycoons-club",
     "public": "public",
     "ignore": [
       "firebase.json",
