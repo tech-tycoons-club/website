@@ -5,6 +5,7 @@
   },
   "hosting": {
     "public": "public",
+    "site": "tech-tycoons-club",
     "ignore": [
       "firebase.json",
       "**/.*",
