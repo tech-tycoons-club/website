@@ -4,7 +4,6 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": { 
-    "site": "tech-tycoons-club",
     "public": "public",
     "site": "tech-tycoons-club",
     "ignore": [
